@@ -1,0 +1,5 @@
+#!/bin/bash
+TOMCAT_PATH=/usr/local/tomcat
+mvn clean package
+rm -r $TOMCAT_PATH/webapps/ROOT
+cp -rf ./target/CounterWebApp.war $TOMCAT_PATH/webapps
